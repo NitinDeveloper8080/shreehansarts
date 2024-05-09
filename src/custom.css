@@ -1,0 +1,40 @@
+ul.nav > a:hover{
+    color:red !important;
+    background-color: white;
+}
+
+.nav-link:hover{
+    /* text-decoration: line-through; */
+        color: #f0b242;
+}
+
+ul li {
+    margin-right: 20px;
+}
+
+
+#mylogo{
+    filter: invert(200%);
+}
+.dropdown-item:hover{
+   
+color: white;
+background-color: #f0b242;
+appearance: none;
+
+}
+.dropdown{
+    padding: 0;
+    margin: 0;
+}
+.dropdown-menu{
+    padding: 0;
+}
+.dropdown-item{
+   
+    color: white;
+    background-color: black;
+    appearance: none;
+    z-index:-3;
+    
+    }
