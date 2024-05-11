@@ -5,6 +5,8 @@ import CategoryDetail from './components/CategoryDetail'
 import Error from './components/Error'
 import VideoDescription from './components/VideoDescription'
 import Header from './components/Header'
+import VideoPlayBack from './components/VideoPlayBack'
+import VideoDescription2 from './components/VideoDescription2'
 // import VideoDescription from './components/VideoDescription'
 const App = () => {
  return <>
@@ -14,7 +16,7 @@ const App = () => {
 <Route path='/' element={<Home/>}/>
   <Route path='/category/:categoryName' element={<CategoryDetail/>}/>
   <Route path='/category/' element={<Error/>}/>
-<Route path='/video/:category/:songName' element={<VideoDescription/>}/>
+<Route path='/video/:category/:songName' element={<VideoDescription2/>}/>
 
 </Routes>
 
