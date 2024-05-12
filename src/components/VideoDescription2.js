@@ -1,102 +1,6 @@
-// // import React, { useEffect, useState } from 'react'
-// // import { useParams } from 'react-router-dom'
-
-// // const VideoDescription2 = () => {
-// //   const {category,songName}=useParams()
-// //   const [apiData,setApiData]=useState([])
-// //   const [elementdata,setElement]=useState(null)
-// //   const [filtered,setfiltered]=useState(null)
-// //   const fetchApi=async()=>{
-// //     const response=await fetch(`https://shreehansarts.com/api/apis/musicbycategory.php?category=${category}`)
-// //     const jsonData=await response.json()
-// //     setApiData(jsonData)
-
-// //     }
-// //   useEffect(()=>{
-// //     fetchApi()
-  
-// //   },[category
-// //   ,songName])
-
-
-// //   const filtereddata=apiData.filter((elem)=>{
-// //     if(elem.slug===songName){
-// //       return elem
-// //     }
-// //   })
-// //   setfiltered(filtereddata)
-// // console.log(filtereddata)
-// // console.log(apiData);
-
-// //   return <>
-// //   <h2>category: {category} and video song : {songName} </h2>
-// //   {apiData.length} <br/>
-
-
-
- 
-  
-
-
- 
-
-// //   </>
-// // }
-
-// // export default VideoDescription2
-
-
-
-
-// import React, { useEffect, useState } from 'react';
-// import { useParams } from 'react-router-dom';
-
-// const VideoDescription2 = () => {
-//   const { category, songName } = useParams();
-//   const [apiData, setApiData] = useState([]);
-//   const [filtered, setFiltered] = useState(null);
-
-//   const fetchApi = async () => {
-//     try {
-//       const response = await fetch(`https://shreehansarts.com/api/apis/musicbycategory.php?category=${category}`);
-//       const jsonData = await response.json();
-//       setApiData(jsonData);
-//     } catch (error) {
-//       console.error('Error fetching API data:', error);
-//     }
-//   };
-
-//   useEffect(() => {
-//     fetchApi();
-//   }, [category, songName]);
-
-//   useEffect(() => {
-//     // Filter the data when apiData or songName changes
-//     const filteredData = apiData.filter(elem => elem.slug === songName);
-//     setFiltered(filteredData);
-//   }, [apiData, songName]);
-
-//   console.log(filtered);
-//   console.log(apiData);
-
-//   return (
-//     <>
-//      {/* <iframe src={`https:youtube.com/embed/${youtubeid}`} title="YouTube video" allowFullScreen></iframe> */}
-//           <h2>Category: {category} and Video Song: {songName}</h2>
-//           <p>{apiData.length}</p>
-//           {filtered && filtered.length > 0 && (
-//       <h1>Filtered Data URL: {filtered[0].url}</h1>
-//     )}
-//     </>
-//   );
-// };
-
-// export default VideoDescription2;
-
-
-
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Product from './Product';
 
 const VideoDescription2 = () => {
   const { category, songName } = useParams();
@@ -116,7 +20,7 @@ const VideoDescription2 = () => {
 
   useEffect(() => {
     fetchApi();
-  }, [category, songName]);
+  }, [category, songName,fetchApi]);
 
   useEffect(() => {
     // Filter the data when apiData or songName changes
@@ -128,7 +32,15 @@ const VideoDescription2 = () => {
     // Extract YouTube video ID from the first element of filtered
     if (filtered && filtered.length > 0) {
       const url = filtered[0].url;
-      const videoId = url.split('v=')[1];
+      let videoId = '';
+
+      // Extract video ID based on different YouTube URL formats
+      if (url.includes('youtube.com/watch?v=')) {
+        videoId = url.split('v=')[1];
+      } else if (url.includes('youtu.be/')) {
+        videoId = url.split('youtu.be/')[1];
+      }
+
       setYoutubeId(videoId);
     }
   }, [filtered]);
@@ -138,6 +50,8 @@ const VideoDescription2 = () => {
 
   return (
     <>
+ <Product/>
+
       <h2>Category: {category} and Video Song: {songName}</h2>
       <p>API Data Length: {apiData.length}</p>
       {filtered && filtered.length > 0 && (

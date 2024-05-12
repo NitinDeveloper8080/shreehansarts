@@ -44,3 +44,7 @@ appearance: none;
         list-style-type: none;
         margin-left: 0;
     }
+
+    .link-no-underline{
+        text-decoration: none;
+    }
