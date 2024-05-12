@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-
+import { Link, useParams } from 'react-router-dom'
+import "../custom.css"
 const CategoryDetail = () => {
 
 
@@ -25,7 +25,8 @@ fetchApi()
   <div className='container '>
  <div className="row  g-3 "  >
   { data2.length>0 && data2.map((elem,idx)=>(
-     <div className="col-lg-3 col-md-4 col-12">
+    <div className="col-lg-3 col-md-4 col-12">
+       <Link to={`../../video/${categoryName}/${elem.slug}`} className='link-no-underline'>
      <div className="card" key={idx}>
        <img src={elem.thumbnail} className="card-img-top" width='400'
          alt="Hollywood Sign on The Hill" />
@@ -37,6 +38,7 @@ fetchApi()
          </p>
        </div>
      </div>
+  </Link>
   </div>
   ))}
 

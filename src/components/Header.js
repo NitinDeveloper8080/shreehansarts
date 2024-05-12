@@ -10,6 +10,7 @@ import React from 'react'
 // import '../assets/css/rtl.min3b92.css?v=5.1.0'
 import '../custom.css'
 import logo from '../constants'
+import { Link, NavLink } from 'react-router-dom'
 const Header = () => {
  return <>
 
@@ -25,7 +26,11 @@ const Header = () => {
           <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <ul className="navbar-nav mb-2 mb-lg-0 ms-auto  fs-5 p-3">
               <li className="nav-item">
-                <a className="nav-link " aria-current="page" href="home">Home</a>
+                <a className="nav-link " aria-current="page" href='#'>
+                  
+               Home
+                  
+                  </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">About Us</a>

@@ -39,20 +39,23 @@ const Product = (props) => {
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
-          items: 1  ,
-          partialVisibilityGutter: 20,
-          centerMode:true
+          items: 2 ,
+          partialVisibilityGutter: 10,
+        
         }
       };
 
 console.log(apiData)
  return <>
+
+
+
     {apiData.length >0 && (
 <Carousel responsive={responsive}>
 {
     apiData.map((elem,idx)=>(
        
-     <div class="card border-0" style={{width:'15rem'}} key={idx}>
+     <div class="card border-0 " id='box-mine' style={{width:'15rem'}} key={idx}>
         <Link to={`/video/${props.categoryName}/${elem.slug}`} className='link-no-underline'>
   <img src={elem.thumbnail} className="card-img-top" alt="..." />
   <div className="card-body bg-dark text-light p-1">
