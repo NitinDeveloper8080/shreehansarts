@@ -88,4 +88,8 @@ appearance: none;
         background-color: gold;
       }
 
-    
+      #box-mine {
+        width: calc(50% - 10px); /* Adjust the width of the card to fit two cards with a gap */
+        margin: 20px; /* Center the card horizontally */
+      }
+      

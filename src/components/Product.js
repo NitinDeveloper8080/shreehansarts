@@ -39,9 +39,10 @@ const Product = (props) => {
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
-          items: 2 ,
-          partialVisibilityGutter: 10,
-        
+          items: 1 ,
+          // partialVisibilityGutter: 10,
+        slidesToSlide:1,
+        centerMode:true
         }
       };
 
