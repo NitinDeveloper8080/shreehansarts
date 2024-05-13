@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Product from './Product';
 import '../custom.css'
 const VideoDescription2 = () => {
@@ -50,7 +50,7 @@ const nullShow='NULL'
 
   console.log(filtered);
   console.log(apiData);
-
+const nav=useNavigate()
   return (
     <>
       
@@ -68,8 +68,9 @@ const nullShow='NULL'
               </div>
             </>
           )}
+         
+<button onClick={()=>nav(-1)}>go back </button>
         </div>
-
 
 
 {filtered && filtered.length>0 && (

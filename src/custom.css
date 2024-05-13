@@ -92,4 +92,147 @@ appearance: none;
         width: calc(50% - 10px); /* Adjust the width of the card to fit two cards with a gap */
         margin: 20px; /* Center the card horizontally */
       }
+      .outer-div-outlet{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .outer-div-button{
+        background-color: #EA983C;
+        color: white;
+        width: 164px;
+        font-size: larger;
+        height: 42px;
+
+        
+      }
       
+      .golden-color{
+        color:#EA983C;
+      }
+
+
+      /* other pages css  */
+
+
+      .banner {
+        position: relative;
+        width: 100%;
+    }
+    
+    .banner img {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .banner-text {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+        color: white;
+    }
+    
+    .banner-text h1 {
+        font-size: 45px;
+    }
+    
+    .first-section {
+        margin: 3rem;
+    
+    }
+    
+    .first-section h1 {
+        margin-bottom: 2rem;
+        text-align: center;
+        font-size: xx-large;
+    }
+    
+    .first-section p {
+        line-height: 25px;
+        letter-spacing: 1px;
+        text-align: justify;
+    }
+    
+    .drone {
+        margin: 2rem;
+        display: flex;
+        background-color: #FFE8E8;
+        border-radius: 10px;
+        justify-content: space-between;
+        width: fit-content;
+    }
+    
+    .drone-text {
+        width: 60%;
+        padding: 1rem;
+    }
+    
+    .drone-text h1 {
+        margin-bottom: 1rem;
+    }
+    
+    .drone-text p {
+        line-height: 30px;
+        text-align: justify;
+    }
+    
+    .drone-image {
+        width: 40%;
+    }
+    
+    .drone-image img {
+        height: 300px;
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .drone:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+        border-radius: 10px;
+    }
+    
+    .gopro {
+        background-color: white;
+    }
+    
+    @media screen and (max-width: 767px) {
+    
+        .banner-text {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2;
+            color: white;
+        }
+    
+        .banner-text h1 {
+            font-size: 28px;
+        }
+    
+        .drone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .drone-text {
+            width: 100%;
+        }
+    
+        .drone-text h1 {
+            font-size: x-large;
+        }
+    
+        .drone-image {
+            width: 100%;
+        }
+    }
+
+      /* other pages css ends  */

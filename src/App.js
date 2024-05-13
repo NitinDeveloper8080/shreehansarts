@@ -10,6 +10,8 @@ import VideoDescription2 from './components/VideoDescription2'
 import Main from './components/Main'
 import Footer from './components/Footer'
 import About from './components/experiment/About'
+import ServiceOffer from './components/ServiceOffer'
+import VideoProduction from './components/VideoProduction'
 // import VideoDescription from './components/VideoDescription'
 const App = () => {
  return <>
@@ -21,12 +23,13 @@ const App = () => {
   <Route path='/category/:categoryName' element={<CategoryDetail/>}/>
   <Route path='/category/' element={<Error/>}/>
 <Route path='/video/:category/:songName' element={<VideoDescription2/>}/>
-
+<Route path='/serviceOffer' element={<ServiceOffer/>}/>
+<Route path='/services/video-production-company' element={<VideoProduction/>}/>
 </Routes>
 
 
+<Footer/>
  </BrowserRouter>
-
  </>
 }
 

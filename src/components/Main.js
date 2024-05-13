@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Product from './Product';
+import { Link, NavLink } from 'react-router-dom';
 
 const Main = () => {
     const [data,setData]=useState([])
@@ -49,8 +50,14 @@ console.log(data)
 
 {data.map((elem,idx)=>(
     <div className='container'>
-<h2 key={idx}>{elem.name}</h2>
+      <div className='outer-div-outlet'>
+<h2 className='outer-div-content' key={idx}>{elem.name}</h2>
+<NavLink to={`/category/${elem.slug}`} >
+<button className='outer-div-button' >More Videos</button>
 
+</NavLink>
+
+      </div>
   <Product categoryName={elem.slug}/>
 
 
