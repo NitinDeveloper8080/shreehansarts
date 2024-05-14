@@ -191,10 +191,10 @@ appearance: none;
         padding: 1rem;
     }
     
-    .drone:hover {
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+    /* .drone:hover {
+        box-shadow: 0 0 0px rgba(0, 0, 0, 0.9);
         border-radius: 10px;
-    }
+    } */
     
     .gopro {
         background-color: white;
@@ -236,3 +236,200 @@ appearance: none;
     }
 
       /* other pages css ends  */
+
+
+
+      /* style.css code starts  */
+
+      .banner {
+        position: relative;
+        width:100%;
+    
+         
+    }
+    .head{
+        color: #ffa500;
+        
+    }
+    
+    .banner img {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .banner-text {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+        color: white;
+    }
+    
+    .banner-text h1 {
+        font-size: 45px;
+    }
+    
+    .first-section {
+        margin: 3rem;
+    
+    }
+    
+    .first-section h1 {
+        margin-bottom: 2rem;
+        text-align: center;
+        font-size: xx-large;
+    }
+    
+    .first-section p {
+        line-height: 25px;
+        letter-spacing: 1px;
+        text-align: justify;
+    }
+    
+    .drone {
+        margin: 2rem;
+        display: flex;
+        background-color: #FFE8E8;
+        border-radius: 10px;
+        justify-content: space-between;
+        width: fit-content;
+    }
+    
+    .drone-text {
+        width: 60%;
+        padding: 1rem;
+    }
+    
+    .drone-text h1 {
+        margin-bottom: 1rem;
+    }
+    
+    .drone-text p {
+        line-height: 30px;
+        text-align: justify;
+    }
+    
+    .drone-image {
+        width: 40%;
+    }
+    
+    .drone-image img {
+        height: 300px;
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .drone:hover {
+        box-shadow: 0 0 0px rgba(0, 0, 0, 0.9);
+        border-radius: 10px;
+    }
+    
+    .gopro {
+        background-color: white;
+    }
+    
+    @media screen and (max-width: 767px) {
+    
+        .banner-text {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2;
+            color: white;
+        }
+    
+        .banner-text h1 {
+            font-size: 28px;
+        }
+    
+        .drone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .drone-text {
+            width: 100%;
+        }
+    
+        .drone-text h1 {
+            font-size: x-large;
+        }
+    
+        .drone-image {
+            width: 100%;
+        }
+    }
+    
+    .film{
+        color:#ffa500;
+        text-align: center;
+        font-size: 30px;
+        margin-top: 20px;
+        
+    }
+    .para{
+        text-align: center;
+        font-size: 20px;
+        
+    }
+    .edit{
+        font-size: 20px;
+    }
+    .video{
+        color: #ffa500;
+    }
+    
+    
+    #videoEdit{
+        /* background-image: url('./Frame 78 (1).png'); */
+        background-size: 100% auto;
+       
+       
+        width: 100%;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#ea983c;
+        font-size: x-large;
+    }
+                                                     /* Media consulting css start */
+    
+         .media{
+            color: #ea983c;
+            text-align: center;
+            font-size: 35px;
+         }
+    
+         .mediapara{
+            text-align: center;
+            font-size: 20px;
+         }
+         .smallhead{
+            text-align: center;
+            color: #ea983c;
+         }
+    
+                                                       /* Media Consulting Css End */
+    
+           /* Studio booking CSS start        */
+    
+           .Studio{
+            color: #ffa500;
+            text-align: center;
+           }
+      /* styles.css ends  */
+
+      /* own code  */
+.navigate:hover{
+    color:#EA983C;
+
+}
+
+      /* own code ends  */

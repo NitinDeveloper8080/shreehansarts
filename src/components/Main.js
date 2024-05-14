@@ -6,6 +6,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Main = () => {
     const [data,setData]=useState([])
+    
     const fetchApi = async () => {
         try {
           const response = await fetch(`https://shreehansarts.com/api/apis/getAllCategories.php?type=1`);
@@ -19,7 +20,9 @@ const Main = () => {
 useEffect(()=>{
     fetchApi();
 },[])
-console.log(data)
+
+
+// console.log(data)
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -43,17 +46,30 @@ console.log(data)
           centerMode:true
         }
       };
-
+      const defectiveItems=[
+        'Talk Show',
+        'Interview',
+        'Open Mic',
+        'Love Song',
+        'Bollywood Song'
+      ]
+console.warn(`the data is ${data}`)
+console.log(data)
   return <>
   <main className='bg-dark text-light'>
 
 
 {data.map((elem,idx)=>(
-    <div className='container'>
+  <>
+  <div className='container'>
       <div className='outer-div-outlet'>
+        {/* {console.log(elem.name)} */}
+        
 <h2 className='outer-div-content' key={idx}>{elem.name}</h2>
-<NavLink to={`/category/${elem.slug}`} >
-<button className='outer-div-button' >More Videos</button>
+
+<NavLink to={`/category/${elem.slug}`}    style={{textDecoration:'none', border:'1 px solid yellow'}}>
+{/* <button className='outer-div-button' >More Videos</button> */}
+More Videos
 
 </NavLink>
 
@@ -62,6 +78,8 @@ console.log(data)
 
 
 </div>
+  </>
+    
 
 ))}
 

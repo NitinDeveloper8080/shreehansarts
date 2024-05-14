@@ -35,8 +35,8 @@ const Footer = () => {
                     <div className="explore">
                         <h3>Explore</h3>
                         <ul>
-                            <li onClick={() => handleNavigate('/home')}>Home</li>
-                            <li onClick={() => handleNavigate('/terms')}>Terms & Conditions</li>
+                            <li onClick={() => handleNavigate('/')}>Home</li>
+                            <li onClick={() => handleNavigate('/terms-and-conditions')}>Terms & Conditions</li>
                             <li onClick={() => handleNavigate('/about')}>About Us</li>
                             <li onClick={() => handleNavigate('/gallery')}>Gallery</li>
                             <li onClick={() => handleNavigate('/privacy')}>Privacy Policy</li>
@@ -47,8 +47,8 @@ const Footer = () => {
                     <div className="services">
                         <h3>Services</h3>
                         <ul>
-                            <li onClick={() => handleNavigate('/home')}>Video Editing</li>
-                            <li onClick={() => handleNavigate('/home')}>Media Consulting</li>
+                            <li onClick={() => handleNavigate('/services/video-editing')}>Video Editing</li>
+                            <li onClick={() => handleNavigate('/services/media-consulting')}>Media Consulting</li>
                             <li onClick={() => handleNavigate('/home')}>Equipment Availability</li>
                             <li onClick={() => handleNavigate('/home')}>Film Making</li>
                             <li onClick={() => handleNavigate('/home')}>Studio Booking</li>
@@ -58,7 +58,7 @@ const Footer = () => {
                 </div>
                 <div className="subscribe">
                     <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
-                    <div className="subscribe-section">
+                    <div className="subscribe-section w-25">
                         <input type="text" placeholder="Enter your Email" />
                         <button type="submit">Subscribe</button>
                     </div>

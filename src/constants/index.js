@@ -3,6 +3,7 @@ import filmMaking from './images/film-making.webp'
 import studioBooking from './images/studio-booking.webp'
 import videoEditing from './images/video-editing.webp'
 import videoProduction from './images/video-production.jpg'
+import banner from './images/bannerImage.png'
 export default logo;
  export const links=[
     'About',
@@ -11,5 +12,5 @@ export default logo;
     'Movies'
 ]
 export {
-    filmMaking,studioBooking,videoEditing,videoProduction
+    filmMaking,studioBooking,videoEditing,videoProduction,banner
 }
