@@ -5,15 +5,10 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
 const MediaConsulting = () => {
  return <>
+ 
 <div className='mt-3'>
-  <div className="banner"> 
-    <img src={banner} />
-  </div>
-  <div className="banner-text">
-    <h1 className="head">Media Consulting</h1>
-   <NavLink to='/' className='text-decoration-none text-warning' > <IoHome />  &nbsp; Home</NavLink>  <MdKeyboardArrowRight /> Services <MdKeyboardArrowRight/> Media Consulting
-    
-  </div><br /><br />
+  
+  
   <section className="container">
     <h1 className="media"> Media Consultancy And The Digitally Transforming World</h1><br /><br />
     <p className="mediapara">We live in the age of technology where everything has direct links to digitalization and all the social media platforms. 

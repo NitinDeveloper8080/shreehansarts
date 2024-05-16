@@ -1,12 +1,13 @@
 import React from 'react'
 import "../custom.css"
+import { banner } from '../constants'
 const AboutUs = () => {
  return <>
 <div className='container'>
   <div className="banner">
-    <img src="img/banner.jpg" alt />
+    <img src={banner} alt />
   </div>
-  <div className="banner-text">
+  <div className="banner-tex">
     <h1>About</h1>
   </div>
   <div className="first-section">

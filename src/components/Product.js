@@ -61,7 +61,7 @@ console.log(apiData)
   <img src={elem.thumbnail} className="card-img-top" alt="..." />
   <div className="card-body bg-dark text-light p-1">
     <p className="card-text mb-0"> {elem.name} </p>
-    <p className=' mb-1 '> {elem.date} &nbsp; <span style={{color:'red'}}> {props.categoryName} </span></p>
+    <p className=' mb-1 '> {elem.date} &nbsp; <span style={{color:'#ea970a'}}> {props.categoryName} </span></p>
   </div>
   </Link>
 </div>
