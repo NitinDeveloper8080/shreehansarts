@@ -53,7 +53,7 @@ const VideoDescription2 = () => {
   }, [filtered]);
 
   console.log(filtered);
-  console.log(apiData);
+  // console.log(apiData);
 
   return (
     <>
@@ -70,111 +70,103 @@ const VideoDescription2 = () => {
           )}
         </div>
 
-        <button onClick={handleClick} className='m-5'>
-          {/* <BiDownArrowCircle /> */}
-          show info
-        </button>
+        <br />
+        <br />
 
-        <br />
-        <br />
-        {toggle && filtered && filtered.length > 0 && (
-          <>
-            {filtered.map((elem) => (
-              <section className='container' key={elem.id}>
-                <div className='outer-div'>
-                  <div className='outer-div-content'>
-                    <ul>
-                      <li>
-                        <span>Label  :</span>
-                        <span> {elem.label} </span>
-                      </li>
-                      <li>
-                        <span>Producer  :</span>
-                        <span>{elem.producer}</span>
-                      </li>
-                      <li>
-                        <span>Singer :</span>
-                        <span>{elem.singer}</span>
-                      </li>
-                      <li>
-                        <span>Featuring :</span>
-                        <span>{elem.featuring}</span>
-                      </li>
-                      <li>
-                        <span>Lyrics  :</span>
-                        <span>{elem.lyrics}</span>
-                      </li>
-                      <li>
-                        <span>Music  :</span>
-                        <span>{elem.music}</span>
-                      </li>
-                      <li>
-                        <span>Director  :</span>
-                        <span> {elem.director} </span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className='outer-div-content'>
-                    <ul>
-                      <li>
-                        <span>Makeup  :</span>
-                        <span>{elem.makeup}</span>
-                      </li>
-                      <li>
-                        <span>Studio  :</span>
-                        <span>{elem.studio}</span>
-                      </li>
-                      <li>
-                        <span>Creative Head  :</span>
-                        <span>{elem.creativeHead}</span>
-                      </li>
-                      <li>
-                        <span>Editor  :</span>
-                        <span>{elem.editor}</span>
-                      </li>
-                      <li>
-                        <span>Camera  :</span>
-                        <span>{elem.camera}</span>
-                      </li>
-                      <li>
-                        <span>Choreographer  :</span>
-                        <span>{elem.choreographer}</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className='outer-div-content'>
-                    <ul>
-                      <li>
-                        <span>Co-Producer  :</span>
-                        <span>{elem.coproducer}</span>
-                      </li>
-                      <li>
-                        <span>Line Producer  :</span>
-                        <span>{elem.lineproducer}</span>
-                      </li>
-                      <li>
-                        <span>Executive Producer  :</span>
-                        <span>{elem.executiveproducer}</span>
-                      </li>
-                      <li>
-                        <span>Writer  :</span>
-                        <span>{elem.writer}</span>
-                      </li>
-                      <li>
-                        <span>Mixing &amp; Mastering  :</span>
-                        <span>{elem.mixingmastering}</span>
-                      </li>
-                      <li>
-                        <span>Release Date :</span>
-                        <span>{elem.date}</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-            ))}
-          </>
-        )}
+        {filtered && filtered.length > 0 && filtered.map((elem) => (
+          <section className='container' key={elem.slug}>
+            <div className='outer-div'>
+              <div className='outer-div-content'>
+                <ul>
+                  <li>
+                    <span>Label :</span>
+                    <span>{elem.label}</span>
+                  </li>
+                  <li>
+                    <span>Producer :</span>
+                    <span>{elem.producer}</span>
+                  </li>
+                  <li>
+                    <span>Singer :</span>
+                    <span>{elem.singer}</span>
+                  </li>
+                  <li>
+                    <span>Featuring :</span>
+                    <span>{elem.actors}</span>
+                  </li>
+                  <li>
+                    <span>Lyrics :</span>
+                    <span>{elem.lyrics}</span>
+                  </li>
+                  <li>
+                    <span>Music :</span>
+                    <span>{elem.music}</span>
+                  </li>
+                  <li>
+                    <span>Director :</span>
+                    <span>{elem.director}</span>
+                  </li>
+                </ul>
+              </div>
+              <div className='outer-div-content'>
+                <ul>
+                  <li>
+                    <span>Makeup :</span>
+                    <span>{elem.makeup}</span>
+                  </li>
+                  <li>
+                    <span>Studio :</span>
+                    <span>{elem.studio}</span>
+                  </li>
+                  <li>
+                    <span>Creative Head :</span>
+                    <span>{elem.creativeHead}</span>
+                  </li>
+                  <li>
+                    <span>Editor :</span>
+                    <span>{elem.editor}</span>
+                  </li>
+                  <li>
+                    <span>Camera :</span>
+                    <span>{elem.camera}</span>
+                  </li>
+                  <li>
+                    <span>Choreographer :</span>
+                    <span>{elem.choreographer}</span>
+                  </li>
+                </ul>
+              </div>
+              <div className='outer-div-content'>
+                <ul>
+                  <li>
+                    <span>Co-Producer :</span>
+                    <span>{elem.coproducer}</span>
+                  </li>
+                  <li>
+                    <span>Line Producer :</span>
+                    <span>{elem.lineproducer}</span>
+                  </li>
+                  <li>
+                    <span>Executive Producer :</span>
+                    <span>{elem.executiveproducer}</span>
+                  </li>
+                  <li>
+                    <span>Writer :</span>
+                    <span>{elem.writer}</span>
+                  </li>
+                  <li>
+                    <span>Mixing &amp; Mastering :</span>
+                    <span>{elem.mixingmastering}</span>
+                  </li>
+                  <li>
+                    <span>Release Date :</span>
+                    <span>{elem.date}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        ))}
       </section>
     </>
   );

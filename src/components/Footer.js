@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from '../images/bird_2.jpg';
-// import '../footer.css';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { NavLink, useNavigate } from 'react-router-dom';
-import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
+
 const Footer = () => {
     const navigate = useNavigate();
 
@@ -12,16 +12,12 @@ const Footer = () => {
     };
 
     return (
-        <div>
-            <Wrapper>
+        <Wrapper>
             <div className="footer-section">
                 <div className="welcome">
                     <img src={logo} width={100} alt="logo" />
                     <p>
-                        Welcome to the Shreehans Arts and Creations Pvt. Ltd. I am extremely proud the way our production house
-                        has
-                        risen- with
-                        flexibility and resilience.
+                        Welcome to the Shreehans Arts and Creations Pvt. Ltd. I am extremely proud the way our production house has risen- with flexibility and resilience.
                     </p>
                     <br />
                     <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
@@ -58,25 +54,22 @@ const Footer = () => {
                 </div>
                 <div className="subscribe">
                     <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
-                    <div className="subscribe-section w-25">
-                        <input type="text" placeholder="Enter your Email" />
-                        <button type="submit">Subscribe</button>
-                    </div>
+                    <input type='text' placeholder='Enter your email' className="form-control bsb-form-control-md" />
+                    <button type="submit" className="btn btn-primary bsb-btn-2xl">Subscribe</button>
                 </div>
             </div>
             <div className="developer">
                 <p>Developed by Untechy</p>
             </div>
         </Wrapper>
-        </div>
     );
 }
 
 export default Footer;
 
-const Wrapper=styled.section`
-*{
-    color:white;
+const Wrapper = styled.section`
+* {
+    color: white;
 }
 
 .footer-header p {
@@ -85,14 +78,12 @@ const Wrapper=styled.section`
     text-align: center;
     padding: 1rem;
     font-size: 18px;
-
 }
 
 .footer-section {
     display: flex;
     padding: 5rem;
     background-color: rgb(34, 31, 31);
-
 }
 
 .welcome {
@@ -114,7 +105,7 @@ h3 {
 ul li {
     line-height: 20px;
     margin-bottom: 10px;
-    list-style-type: square;
+    list-style-type: square; /* Ensures list style type is square */
     margin-left: -20px;
 }
 
@@ -128,24 +119,15 @@ ul li {
     margin-left: 3rem;
 }
 
-.explore {
-    width: 100%;
-
-
-
-}
-
-.services {
+.explore, .services {
     width: 100%;
 }
 
 .subscribe {
     width: 100%;
-
-
-
 }
-.welcome img{
+
+.welcome img {
     margin-bottom: 6px;
 }
 
@@ -157,6 +139,7 @@ ul li {
     padding: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    width: max-content;
 }
 
 .subscribe-section button {
@@ -177,14 +160,12 @@ ul li {
 @media screen and (max-width: 767px) {
     .welcome img {
         margin-left: 3rem;
-
     }
 
     .footer-section {
         display: flex;
         flex-direction: column;
         padding: 1rem;
-
     }
 
     .welcome {
@@ -200,17 +181,9 @@ ul li {
         display: flex;
         margin-bottom: 1rem;
         margin-left: 2rem;
-
     }
 
-    .explore {
-
-
-        margin-left: 0rem;
-    }
-
-    .services {
-
+    .explore, .services {
         margin-left: 0rem;
     }
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import Home from './components/Home'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import CategoryDetail from './components/CategoryDetail'
 import Error from './components/Error'
@@ -22,6 +21,8 @@ import { Navbar } from 'react-bootstrap'
 import NavBar from './components/NavBar'
 import Footer2 from './components/Footer2'
 // import VideoDescription from './components/VideoDescription'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const App = () => {
  return <>
 

@@ -20,7 +20,7 @@ const Product = (props) => {
         fetchApi()
       },[])
 
-
+// my responsive code 
       const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -34,17 +34,27 @@ const Product = (props) => {
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
-          items: 3,
-          partialVisibilityGutter: 30
+          items: 4,
+          partialVisibilityGutter: 20
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
-          items: 1 ,
-          // partialVisibilityGutter: 10,
-        slidesToSlide:1,
-        centerMode:true
+          items: 2 ,
+          partialVisibilityGutter: 20,
+        slidesToSlide:2 ,
+        
         }
       };
+
+      const dotStyle = {
+        width: '10px', // Adjust size as needed
+        height: '10px', // Adjust size as needed
+        backgroundColor: '#D58D37',
+        borderRadius: '50%',
+        display: 'inline-block'
+      };
+      
+  
 
 console.log(apiData)
  return <>
@@ -52,7 +62,60 @@ console.log(apiData)
 
 
     {apiData.length >0 && (
-<Carousel responsive={responsive}>
+<Carousel
+  additionalTransfrom={0}
+  arrows
+  autoPlaySpeed={3000}
+  centerMode={false}
+  className=""
+  containerClass="container"
+
+  dotListClass=""
+  draggable
+  focusOnSelect={false}
+  infinite
+  itemClass=""
+  keyBoardControl
+  minimumTouchDrag={80}
+  pauseOnHover
+  renderArrowsWhenDisabled={false}
+  renderButtonGroupOutside={false}
+  renderDotsOutside={false}
+  responsive={{
+    desktop: {
+      breakpoint: {
+        max: 3000,
+        min: 1024
+      },
+      items: 5,
+      partialVisibilityGutter: 40
+    },
+    mobile: {
+      breakpoint: {
+        max: 464,
+        min: 0
+      },
+      items: 1,
+      partialVisibilityGutter: 30
+    },
+    tablet: {
+      breakpoint: {
+        max: 1024,
+        min: 464
+      },
+      items: 2,
+      partialVisibilityGutter: 30
+    }
+  }}
+  rewind={false}
+  rewindWithAnimation={false}
+  rtl={false}
+  shouldResetAutoplay
+  showDots={false}
+  sliderClass=""
+  slidesToSlide={1}
+  swipeable={false}
+>
 {
     apiData.map((elem,idx)=>(
        
@@ -60,8 +123,9 @@ console.log(apiData)
         <Link to={`/video/${props.categoryName}/${elem.slug}`} className='link-no-underline'>
   <img src={elem.thumbnail} className="card-img-top" alt="..." />
   <div className="card-body bg-dark text-light p-1">
-    <p className="card-text mb-0"> {elem.name} </p>
-    <p className=' mb-1 '> {elem.date} &nbsp; <span style={{color:'#ea970a'}}> {props.categoryName} </span></p>
+    <p className="card-text mb-0" style={{textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',overflow:'hidden'}}> {elem.name} </p>
+    <p className=' mb-1 '> {elem.date.slice(0,4)} &nbsp; <span style={{color:'#ea970a'}}> <span style={dotStyle}></span> {props.categoryName} </span></p>
   </div>
   </Link>
 </div>

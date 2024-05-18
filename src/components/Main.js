@@ -3,15 +3,18 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Product from './Product';
 import { Link, NavLink } from 'react-router-dom';
+import Preloader from './PreLoader';
 
 const Main = () => {
     const [data,setData]=useState([])
-    
+    const [filter,setFilter]=useState([])
     const fetchApi = async () => {
         try {
           const response = await fetch(`https://shreehansarts.com/api/apis/getAllCategories.php?type=1`);
           const jsonData = await response.json();
-          setData(jsonData);
+          const filteredData = jsonData.filter(item => !defectiveItems.includes(item.name));
+          setData(filteredData)
+          // setFilter(filteredData);
         } catch (error) {
           console.error('Error fetching API data:', error);
         }
@@ -20,6 +23,7 @@ const Main = () => {
 useEffect(()=>{
     fetchApi();
 },[])
+
 
 
 // console.log(data)
@@ -53,9 +57,11 @@ useEffect(()=>{
         'Love Song',
         'Bollywood Song'
       ]
+
 console.warn(`the data is ${data}`)
 console.log(data)
   return <>
+ 
   <main className='bg-dark text-light'>
 
 

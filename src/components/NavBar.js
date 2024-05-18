@@ -1,91 +1,36 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 
-const NavBar = () => {
-  const navigate = useNavigate();
-  
-  const handleNavigate = (url) => {
-    navigate(url);
-    // Close any open dropdowns
-    const dropdownMenus = document.querySelectorAll('.dropdown-menu.show');
-    dropdownMenus.forEach(menu => {
-      menu.classList.remove('show');
-    });
-  };
-
-  const toggleDropdown = (event) => {
-    event.preventDefault();
-    const dropdown = event.currentTarget.nextElementSibling;
-    const isShown = dropdown.classList.contains('show');
-    // Close any open dropdowns
-    const dropdownMenus = document.querySelectorAll('.dropdown-menu.show');
-    dropdownMenus.forEach(menu => {
-      menu.classList.remove('show');
-    });
-    // Toggle the clicked dropdown
-    if (!isShown) {
-      dropdown.classList.add('show');
-    }
-  };
-
+function AppNavbar() {
   return (
-    <>
-      <nav className="navbar navbar-expand-lg bg-dark navbar-dark ">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            <img id="mylogo" src="./log.png" width={254} height={75} alt="Logo" />
-          </a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon" />
-          </button>
-          <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-            <ul className="navbar-nav mb-2 mb-lg-0 ms-auto fs-5 p-3">
-              <li className="nav-item">
-                <a className="nav-link" aria-current="page" onClick={() => handleNavigate('/')}>Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" onClick={() => handleNavigate('/about')}>About Us</a>
-              </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" role="button" onClick={toggleDropdown} aria-expanded="false">
-                  Services
-                </a>
-                <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" onClick={() => handleNavigate('/services/video-editing')}>Video Editing</a></li>
-                  <li><a className="dropdown-item" onClick={() => handleNavigate('/')}>Film Making</a></li>
-                  <li><a className="dropdown-item" onClick={() => handleNavigate('/services/media-consulting')}>Media Consulting</a></li>
-                  <li><a className="dropdown-item" onClick={() => handleNavigate('/')}>Studio Booking</a></li>
-                  <li><a className="dropdown-item" onClick={() => handleNavigate('/')}>Equipment Availability</a></li>
-                  <li><a className="dropdown-item" onClick={() => handleNavigate('/services/video-production-company')}>Video Production Company</a></li>
-                </ul>
-              </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" role="button" onClick={toggleDropdown} aria-expanded="false">
-                  Movies
-                </a>
-                <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Jaggu Ki Lalten</a></li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Gallery</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Blogs</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Contact Us</a>
-              </li>
-            </ul>
-            <form className="d-flex ms-auto" role="search">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button className="btn btn-warning text-light" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-    </>
+    <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand href="/">Shreehans Arts</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
+            <NavDropdown title="Services" id="services-dropdown">
+              <NavDropdown.Item href="/services/video-editing">Video Editing</NavDropdown.Item>
+              <NavDropdown.Item href="/services/film-making">Film Making</NavDropdown.Item>
+              <NavDropdown.Item href="/services/media-consulting">Media Consulting</NavDropdown.Item>
+              <NavDropdown.Item href="/services/studio-booking">Studio Booking</NavDropdown.Item>
+              <NavDropdown.Item href="/services/equipment-availability">Equipment Availability</NavDropdown.Item>
+              <NavDropdown.Item href="/services/video-production">Video Production</NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="Movies" id="movies-dropdown">
+              <NavDropdown.Item href="/movies/jaggu-ki-lalten">Jaggu ki Lalten</NavDropdown.Item>
+              {/* Add more movies here */}
+            </NavDropdown>
+            <Nav.Link href="/gallery">Gallery</Nav.Link>
+            <Nav.Link href="/blogs">Blogs</Nav.Link>
+            <Nav.Link href="/contact">Contact</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
-export default NavBar;
+export default AppNavbar;
