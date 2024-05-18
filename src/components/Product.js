@@ -21,30 +21,30 @@ const Product = (props) => {
       },[])
 
 // my responsive code 
-      const responsive = {
-        superLargeDesktop: {
-          // the naming can be any, depends on you.
-          breakpoint: { max: 4000, min: 3000 },
-          items: 5
-        },
-        desktop: {
-          breakpoint: { max: 3000, min: 1024 },
-          items: 5,
-          partialVisibilityGutter: 40
-        },
-        tablet: {
-          breakpoint: { max: 1024, min: 464 },
-          items: 4,
-          partialVisibilityGutter: 20
-        },
-        mobile: {
-          breakpoint: { max: 464, min: 0 },
-          items: 2 ,
-          partialVisibilityGutter: 20,
-        slidesToSlide:2 ,
+      // const responsive = {
+      //   superLargeDesktop: {
+      //     // the naming can be any, depends on you.
+      //     breakpoint: { max: 4000, min: 3000 },
+      //     items: 5
+      //   },
+      //   desktop: {
+      //     breakpoint: { max: 3000, min: 1024 },
+      //     items: 5,
+      //     partialVisibilityGutter: 40
+      //   },
+      //   tablet: {
+      //     breakpoint: { max: 1024, min: 464 },
+      //     items: 4,
+      //     partialVisibilityGutter: 20
+      //   },
+      //   mobile: {
+      //     breakpoint: { max: 464, min: 0 },
+      //     items: 2 ,
+      //   partialVisibilityGutter: 2,
+      //   slidesToSlide:2 ,
         
-        }
-      };
+      //   }
+      // };
 
       const dotStyle = {
         width: '10px', // Adjust size as needed
@@ -65,6 +65,7 @@ console.log(apiData)
 <Carousel
   additionalTransfrom={0}
   arrows
+  autoPlay={true}
   autoPlaySpeed={3000}
   centerMode={false}
   className=""
@@ -95,15 +96,16 @@ console.log(apiData)
         max: 464,
         min: 0
       },
-      items: 1,
-      partialVisibilityGutter: 30
+      items: 2,
+  
+      partialVisibilityGutter: 0
     },
     tablet: {
       breakpoint: {
         max: 1024,
         min: 464
       },
-      items: 2,
+      items: 3,
       partialVisibilityGutter: 30
     }
   }}

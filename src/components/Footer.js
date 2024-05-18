@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from '../images/bird_2.jpg';
+// import logo from '../images/bird_2.jpg';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Footer = () => {
+const Footer = (props) => {
     const navigate = useNavigate();
 
     const handleNavigate = (url) => {
@@ -15,16 +15,27 @@ const Footer = () => {
         <Wrapper>
             <div className="footer-section">
                 <div className="welcome">
-                    <img src={logo} width={100} alt="logo" />
+                    <img src={props.logo} width={250} alt="logo" />
                     <p>
                         Welcome to the Shreehans Arts and Creations Pvt. Ltd. I am extremely proud the way our production house has risen- with flexibility and resilience.
                     </p>
                     <br />
                     <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
+                        <a href='https://www.facebook.com/shreehansarts/'>
+
                         <FaFacebook style={{ marginRight: '20px' }} />
+                        </a>
+                        <a href='https://www.instagram.com/shreehansarts/'>
                         <FaInstagram style={{ marginRight: '20px' }} />
+                        </a>
+                        <a href='https://in.linkedin.com/company/shreehansartscreations?trk=public_post_feed-actor-name'>
                         <FaLinkedin style={{ marginRight: '20px' }} />
+
+                        </a>
+                      <a href='https://x.com/shreehansarts'>
                         <FaTwitter />
+
+                      </a>
                     </div>
                 </div>
                 <div className="mobile">
@@ -35,7 +46,7 @@ const Footer = () => {
                             <li onClick={() => handleNavigate('/terms-and-conditions')}>Terms & Conditions</li>
                             <li onClick={() => handleNavigate('/about')}>About Us</li>
                             <li onClick={() => handleNavigate('/gallery')}>Gallery</li>
-                            <li onClick={() => handleNavigate('/privacy')}>Privacy Policy</li>
+                            <li onClick={() => handleNavigate('/privacy-policy')}>Privacy Policy</li>
                             <li onClick={() => handleNavigate('/contact')}>Contact Us</li>
                             <li onClick={() => handleNavigate('/blogs')}>Blogs</li>
                         </ul>
@@ -46,8 +57,8 @@ const Footer = () => {
                             <li onClick={() => handleNavigate('/services/video-editing')}>Video Editing</li>
                             <li onClick={() => handleNavigate('/services/media-consulting')}>Media Consulting</li>
                             <li onClick={() => handleNavigate('/home')}>Equipment Availability</li>
-                            <li onClick={() => handleNavigate('/home')}>Film Making</li>
-                            <li onClick={() => handleNavigate('/home')}>Studio Booking</li>
+                            <li onClick={() => handleNavigate('/services/film-making')}>Film Making</li>
+                            <li onClick={() => handleNavigate('/services/studio-booking')}>Studio Booking</li>
                             <li onClick={() => handleNavigate('/services/video-production-company')}>Video Production</li>
                         </ul>
                     </div>
@@ -55,11 +66,11 @@ const Footer = () => {
                 <div className="subscribe">
                     <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
                     <input type='text' placeholder='Enter your email' className="form-control bsb-form-control-md" />
-                    <button type="submit" className="btn btn-primary bsb-btn-2xl">Subscribe</button>
+                    <button type="submit" className="btn btn-warning bsb-btn-2xl container-fluid" style={{backgroundColor:'#EA983C',color:'white', height:'2.5rem',marginTop:'0.2rem'}}>Subscribe</button>
                 </div>
             </div>
             <div className="developer">
-                <p>Developed by Untechy</p>
+                <p>Developed by Speedwell IT Solutions</p>
             </div>
         </Wrapper>
     );
@@ -149,6 +160,8 @@ ul li {
 
 .developer {
     background-color: rgb(234, 151, 10);
+    height:50px;
+    text-align:center;
 }
 
 .developer p {

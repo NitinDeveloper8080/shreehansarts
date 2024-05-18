@@ -2,10 +2,14 @@ import React from 'react'
 
 const VideoEditing = () => {
  return <>
-<div className='container'>
-  <div id="videoEdit">
-    <h2>Video Editing </h2>
+ <div className="banner">
+    <img src="/shreehansImages/Frame 78 (1).png    " style={{height: 318}} />
   </div>
+  <div className="banner-text">
+    <h1 className="film">Video Editing</h1>
+  </div><br /><br />
+<div className='container'>
+
   {/* first section */}
   <div className="first-section">
     <h1 className="head">VIDEO EDITING SERVICES</h1>
@@ -53,13 +57,14 @@ const VideoEditing = () => {
         the stunning places you have visited. Check us out today and see what we can do for you.</p>
     </div>
     <div className="drone-image">
-      <img src="./drone.jpg" alt />
+      <img src="/shreehansImages/drone.jpg" alt />
+    
     </div>
   </div>
   {/* second box */}
   <div className="drone gopro">
     <div className="drone-image">
-      <img src="gopro.jpg" alt />
+      <img src="/shreehansImages/gopro.jpg" alt />
     </div>
     <div className="drone-text">
       <h1 className="head">GOPRO VIDEO EDITING SERVICES</h1>
@@ -91,13 +96,13 @@ const VideoEditing = () => {
         goals.</p>
     </div>
     <div className="drone-image">
-      <img src="./empty-modern-creative-agency-office-with-dual-monitors-setup-with-processing-video-film-montage-vide.jpg" alt />
+      <img src="/shreehansImages/empty-modern-creative-agency-office-with-dual-monitors-setup-with-processing-video-film-montage-vide.jpg" alt />
     </div>
   </div>
   {/* fourth box */}
   <div className="drone gopro">
     <div className="drone-image">
-      <img src="./real estate video edidting.jpg" alt />
+      <img src="/shreehansImages/documentry film.jpg" alt />
     </div>
     <div className="drone-text">
       <h1 className="head">REAL ESTATE VIDEO EDITING SERVICES</h1>
@@ -127,13 +132,13 @@ const VideoEditing = () => {
         go to get your tailor-made edited video to put the message out there.</p>
     </div>
     <div className="drone-image">
-      <img src="./blog video editiong.jpg" alt />
+      <img src="/shreehansImages/blog video editiong.jpg" alt />
     </div>
   </div>
   {/* sixth box */}
   <div className="drone gopro">
     <div className="drone-image">
-      <img src="documentry film.jpg" alt />
+      <img src="/shreehansImages/documentry film.jpg" alt />
     </div>
     <div className="drone-text">
       <h1 className="head">CORPORATE VIDEO EDITING SERVICES</h1>

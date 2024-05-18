@@ -73,7 +73,7 @@ console.log(data)
         
 <h2 className='outer-div-content' key={idx}>{elem.name}</h2>
 
-<NavLink to={`/category/${elem.slug}`}    style={{textDecoration:'none', border:'1 px solid yellow'}}>
+<NavLink to={`/category/${elem.slug}`}    style={{textDecoration:'none', color:'#EA983C'}}>
 {/* <button className='outer-div-button' >More Videos</button> */}
 More Videos
 

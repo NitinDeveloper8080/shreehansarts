@@ -3,17 +3,16 @@ import "../custom.css"
 import { banner } from '../constants'
 const AboutUs = () => {
  return <>
-<div className='container'>
-  <div className="banner">
-    <img src={banner} alt />
+   <div className="banner">
+    <img src="/shreehansImages/Frame 78 (1).png    " style={{height: 318}} />
   </div>
-  <div className="banner-tex">
-    <h1>About</h1>
-  </div>
+  <div className="banner-text">
+    <h1 className="film">About Us</h1>
+  </div><br /><br />
   <div className="first-section">
     <h1>Our Story</h1>
     <p>Founded in 2020 by <b>Dr Neeraj Kumar Gupta</b> and
-      <b>Preeti Gupta</b>, Shreehans Arts and Creations is a fully
+      <b> &nbsp;Preeti Gupta</b>, Shreehans Arts and Creations is a fully
       integrated
       studio
       that aims to produce definitive works and leaves a prolific experience for the audience of modern Indian
@@ -21,6 +20,7 @@ const AboutUs = () => {
     </p>
     <br />
   </div>
+  <div className='container'>
   <div className="our-story-text">
     <div className="our-story-text-left">
       <p>Over the years, Shreehans Arts and Creations has established itself as one of the most sought-after film
@@ -73,7 +73,8 @@ const AboutUs = () => {
       <img src="img/director_image.jpg" alt />
     </div>
   </div>
-</div>
+  </div>
+
 
 
  </>

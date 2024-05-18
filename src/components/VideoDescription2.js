@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import { BiDownArrowCircle } from "react-icons/bi";
 import '../custom.css';
-
+import { GiTireIronCross } from "react-icons/gi";
 const VideoDescription2 = () => {
   const { category, songName } = useParams();
   const [apiData, setApiData] = useState([]);
@@ -57,6 +57,15 @@ const VideoDescription2 = () => {
 
   return (
     <>
+
+    <div className='text-end container-fluid ' style={{backgroundColor:'black'}}>
+      <NavLink to='/'  className='me-5'>
+    <GiTireIronCross color="orange" size={32} style={{strokeWidth: "4px" }}/>
+
+      </NavLink>
+      
+    </div>
+
       <section className='dark-screen'>
         <div className='container'>
           {filtered && filtered.length > 0 && (
@@ -73,6 +82,15 @@ const VideoDescription2 = () => {
         <br />
         <br />
 
+        <section className='container'>
+          <div className='container ml-2'>
+          <h1 className='text-center text-md-start'> {songName } || {category} </h1>
+
+          </div>
+
+        </section>
+<br/>
+<br/>
         {filtered && filtered.length > 0 && filtered.map((elem) => (
           <section className='container' key={elem.slug}>
             <div className='outer-div'>

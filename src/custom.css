@@ -296,7 +296,7 @@ appearance: none;
     .drone {
         margin: 2rem;
         display: flex;
-        background-color: #FFE8E8;
+        background-color: #e3daad;
         border-radius: 10px;
         justify-content: space-between;
         width: fit-content;

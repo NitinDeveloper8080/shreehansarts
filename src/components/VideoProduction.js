@@ -4,7 +4,12 @@ import svgImg from './undraw_business_chat_re_gg4h.svg'
 const VideoProduction = () => {
   return <>
   <section>
-    <h2 className='text-center'>Video Production Company </h2>
+  <div className="banner">
+    <img src="/shreehansImages/Frame 78 (1).png    " style={{height: 318}} />
+  </div>
+  <div className="banner-text">
+    <h1 className="film">Video Production</h1>
+  </div><br /><br />
     <div className='container'>
 
         <p>A versatile video production company delivering media solutions to clients nationwide. We work tirelessly to keep the caliber of our video productions high. Our services range from concept to pre-production, production design, directing, and finally, post-production.</p>
@@ -45,7 +50,7 @@ Why Are We Better Than Others?
 </p>
         </div>
         <div className='drone-image'>
-            <img src={svgImg}/>
+            <img src='/shreehansImages/drone.jpg'/>
         </div>
     </div>
 
@@ -53,7 +58,7 @@ Why Are We Better Than Others?
     {/* another section  */}
     <div className='drone gopro'>
         <div className='drone-image'>
-            <img src={testimonial}></img>
+            <img src='/shreehansImages/photography.avif'></img>
         </div>
     <div className='drone-text'>
         <h1 className='head'>TESTIMONIAL VIDEOS
@@ -256,11 +261,7 @@ What Sets Us Apart?
 
 
 
-    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-  <button type="button" class="btn btn-danger">Left</button>
-  <button type="button" class="btn btn-warning">Middle</button>
-  <button type="button" class="btn btn-success">Right</button>
-</div>
+   
   </section>
   </>
 }

@@ -22,14 +22,20 @@ import NavBar from './components/NavBar'
 import Footer2 from './components/Footer2'
 // import VideoDescription from './components/VideoDescription'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import logo from './assets/images/shreehans_arts_logo.png'
+import StudioBooking from './components/StudioBooking'
+import FilmMaking from './components/FilmMaking'
+import PrivacyPolicy from './components/PrivacyPolicy'
+import NewNavbar from './components/NewNavbar'
 const App = () => {
  return <>
 
  <BrowserRouter>
- <NavBar/>
+ {/* <NavBar/> */}
+ <NewNavbar/>
 <Routes>
 <Route path='/' element={<Main/>}/>
+
 <Route path='/expo' element={<About/>}/>
   <Route path='/category/:categoryName' element={<CategoryDetail/>}/>
   <Route path='/category/' element={<Error/>}/>
@@ -40,10 +46,14 @@ const App = () => {
 <Route path='/terms-and-conditions' element={<TermsAndCondition/>}/>
 <Route path='/services/video-editing' element={<VideoEditing/>}/>
 <Route path='/services/media-consulting' element={<MediaConsulting/>}/>
+<Route path='/services/studio-booking' element={<StudioBooking/>}/>
+<Route path='/services/film-making' element={<FilmMaking/>}/>
+<Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
+
 
 </Routes>
 
-<Footer/>
+<Footer logo={logo}/>
 
  </BrowserRouter>
  </>
